@@ -1,6 +1,6 @@
 #container {
-    width: auto;
-    height: auto;
+    width: 750px;
+    height: 500px;
     position: relative;
     background-color: grey;
 }

@@ -1,5 +1,6 @@
 let id = null;
 
+//returns an array of some random starting x and y coordinates for the animatee: form [x, y]
 function randomPosNum(maxWidth, maxHeight) {
 
     const xPos = Math.floor(Math.random() * maxWidth);
@@ -9,6 +10,14 @@ function randomPosNum(maxWidth, maxHeight) {
     console.log(posArray);
     return posArray;
 }
+
+//Returns a random positive or negative number between the number specified, excluding 0
+function randomSignIncr(incrementValue) {
+    let value = Math.random() - 0.5;
+    console.log(value);
+    return value = value > 0 ? Math.ceil((value + value) * incrementValue) : Math.floor((value + value) * incrementValue);
+}
+
 
 //function executed when start button pressed
 function myMove() {
@@ -30,7 +39,7 @@ function myMove() {
         clearInterval(id);
         id = setInterval(() => {
 
-            
+            let xIncr;
 
             /*
             if (posArr[1] + animSizeY >= yMax  || posArr[0] + animSizeX >= xMax) {
