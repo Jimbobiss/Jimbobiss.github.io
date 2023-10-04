@@ -1,6 +1,6 @@
 let id = null;
 
-//returns an array of some random starting x and y coordinates for the animatee: form [x, y]
+//Returns an array of some random starting x and y coordinates for the animatee: form [x, y]
 function randomPosNum(maxWidth, maxHeight) {
 
     const xPos = Math.floor(Math.random() * maxWidth);
@@ -14,12 +14,20 @@ function randomPosNum(maxWidth, maxHeight) {
 //Returns a random positive or negative number between the number specified, excluding 0
 function randomSignIncr(incrementValue) {
     let value = Math.random() - 0.5;
-    console.log(value);
     return value = value > 0 ? Math.ceil((value + value) * incrementValue) : Math.floor((value + value) * incrementValue);
 }
 
+//Function for moving the animatee
+function moveIt(element, xIncr, yIncr, posArr) {
+    posArr[0] = posArr[0] + xIncr;
+    posArr[1] = posArr[1] + yIncr;
 
-//function executed when start button pressed
+    element.style.left = posArr[0] + 'px';
+    element.style.top = posArr[1] + 'px';
+}
+
+
+//Function to bounce element around container
 function myMove() {
 
     if (!id) {
@@ -36,22 +44,38 @@ function myMove() {
         elem.style.left = posArr[0] + 'px';
         elem.style.top = posArr[1] + 'px';
 
+        const bounceValue = document.getElementById("bounce-value").value;
+
+        let xIncr = randomSignIncr(bounceValue);
+        let yIncr = randomSignIncr(bounceValue);
+
         clearInterval(id);
         id = setInterval(() => {
 
-            let xIncr;
+            if (posArr[0] != 0 &&
+                   posArr[0] + animSizeX < xMax &&
+                   posArr[1] != 0 &&
+                   posArr[1] + animSizeY < yMax) {
 
-            /*
-            if (posArr[1] + animSizeY >= yMax  || posArr[0] + animSizeX >= xMax) {
-                clearInterval(id);
-            } else {
-                posArr[0]++;
-                posArr[1]++;
+                moveIt(elem, xIncr, yIncr, posArr);
+            }
 
-                elem.style.left = posArr[0] + 'px';
-                elem.style.top = posArr[1] + 'px';
-            } */
-
+            else if (posArr[0] == 0) {
+                xIncr = -xIncr;
+                moveIt(elem, xIncr, yIncr, posArr);
+            } 
+            else if (posArr[0] + animSizeX == xMax) {
+                xIncr = -xIncr;
+                moveIt(elem, xIncr, yIncr, posArr);
+            }
+            else if (posArr[1] == 0) {
+                yIncr = -yIncr;
+                moveIt(elem, xIncr, yIncr, posArr);
+            }
+            else if (posArr[1] + animSizeY == yMax) {
+                yIncr = -yIncr;
+                moveIt(elem, xIncr, yIncr, posArr);
+            }
         }, 10);
     }
     
@@ -62,4 +86,4 @@ function stopMove() {
     id = null;
 }
 
-document.getElementById("stop").addEventListener("onclick", stopMove);
+document.getElementById("stop").addEventListener("click", stopMove);

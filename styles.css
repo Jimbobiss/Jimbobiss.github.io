@@ -6,8 +6,10 @@
 }
 
 #animation {
-    width: 5px;
-    height: 5px;
+    width: 15px;
+    height: 15px;
     position: absolute;
     background-color: red;
+    border: 1px;
+    border-radius: 5px;
 }
