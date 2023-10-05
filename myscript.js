@@ -34,6 +34,8 @@ function myMove() {
         const container = document.getElementById("container");
         const xMax = container.offsetWidth;
         const yMax = container.offsetHeight;
+        const xMin = 0;
+        const yMin = 0;
 
         const animatee = document.getElementById("animation");
         const animSizeX = animatee.offsetWidth ;
@@ -60,20 +62,20 @@ function myMove() {
                 moveIt(elem, xIncr, yIncr, posArr);
             }
 
-            else if (posArr[0] <= 0) {
-                xIncr = -xIncr;
+            else if (posArr[0] <= xMin) {
+                xIncr = Math.abs(xIncr);
                 moveIt(elem, xIncr, yIncr, posArr);
             } 
             else if (posArr[0] + animSizeX >= xMax) {
-                xIncr = -xIncr;
+                xIncr = -(Math.abs(xIncr));
                 moveIt(elem, xIncr, yIncr, posArr);
             }
-            else if (posArr[1] <= 0) {
-                yIncr = -yIncr;
+            else if (posArr[1] <= yMin) {
+                yIncr = Math.abs(yIncr);
                 moveIt(elem, xIncr, yIncr, posArr);
             }
             else if (posArr[1] + animSizeY >= yMax) {
-                yIncr = -yIncr;
+                yIncr = -(Math.abs(yIncr));
                 moveIt(elem, xIncr, yIncr, posArr);
             }
         }, 10);
