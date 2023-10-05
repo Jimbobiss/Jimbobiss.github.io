@@ -52,27 +52,27 @@ function myMove() {
         clearInterval(id);
         id = setInterval(() => {
 
-            if (posArr[0] != 0 &&
+            if (posArr[0] > 0 &&
                    posArr[0] + animSizeX < xMax &&
-                   posArr[1] != 0 &&
+                   posArr[1] > 0 &&
                    posArr[1] + animSizeY < yMax) {
 
                 moveIt(elem, xIncr, yIncr, posArr);
             }
 
-            else if (posArr[0] == 0) {
+            else if (posArr[0] <= 0) {
                 xIncr = -xIncr;
                 moveIt(elem, xIncr, yIncr, posArr);
             } 
-            else if (posArr[0] + animSizeX == xMax) {
+            else if (posArr[0] + animSizeX >= xMax) {
                 xIncr = -xIncr;
                 moveIt(elem, xIncr, yIncr, posArr);
             }
-            else if (posArr[1] == 0) {
+            else if (posArr[1] <= 0) {
                 yIncr = -yIncr;
                 moveIt(elem, xIncr, yIncr, posArr);
             }
-            else if (posArr[1] + animSizeY == yMax) {
+            else if (posArr[1] + animSizeY >= yMax) {
                 yIncr = -yIncr;
                 moveIt(elem, xIncr, yIncr, posArr);
             }
@@ -81,9 +81,11 @@ function myMove() {
     
 }
 
+//Function that clears the current interval
 function stopMove() {
     clearInterval(id);
     id = null;
 }
+
 
 document.getElementById("stop").addEventListener("click", stopMove);
