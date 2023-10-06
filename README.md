@@ -1,3 +1,3 @@
-# CCPorfolioProj
+# James Hearn Portfolio Home
 
--> Repo to hold code for the Codecademy portfolio website project
+-> This repository contains the code for the main body of my portfolio website, hosted on GitHub Pages.
