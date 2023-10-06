@@ -1,3 +1,5 @@
+/* Code for DVD Bounce project */
+
 let id = null;
 
 //Returns an array of some random starting x and y coordinates for the animatee: form [x, y]
