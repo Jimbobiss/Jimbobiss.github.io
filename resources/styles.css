@@ -12,6 +12,20 @@ body {
     font-family: 'Quicksand', sans-serif;
 }
 
+nav {
+    display: flex;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+a:hover {
+    color: rgb(219, 227, 233);
+}
+
 button {
     font-family: 'Quicksand', sans-serif;
     background-color: rgb(49, 46, 46);
@@ -28,6 +42,21 @@ button:hover {
 
 footer {
     text-align: center;
+    margin-top: 50px;
+}
+
+#about-me-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#creator-headshot {
+    max-height: 200px;
+    max-width: auto;
+    border: 2px solid rgb(49, 46, 46);
+    border-radius: 5px;
+    flex-shrink: 0;
 }
 
 #container {
@@ -51,7 +80,18 @@ footer {
     padding: 10px;
 }
 
+.nav-items {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    align-items: center;
+    margin: 0;
+    margin-left: auto;
+}
 
+.nav-item {
+    margin: 10px;
+}
 
 /* Style the button that is used to open and close the collapsible content */
 .collapsible {
@@ -66,6 +106,18 @@ and when you move the mouse over it (hover) */
     background-color: rgb(55, 54, 54);
 }
 
+.collapsible:after {
+    content: "\002B";
+    color: aliceblue;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2212";
+}
+
 /* Style the collapsible content. Note: hidden by default */
 .content {
     padding: 0 10px;
@@ -76,5 +128,5 @@ and when you move the mouse over it (hover) */
 }
 
 .expandable-text {
-    color: darkcyan;
+    color: rgb(49, 46, 46);
 }
