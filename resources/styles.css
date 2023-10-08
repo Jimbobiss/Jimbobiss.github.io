@@ -4,6 +4,14 @@ html {
     color: aliceblue;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 900px;
+    font-family: 'Quicksand', sans-serif;
+}
+
 button {
     background-color: darkcyan;
     color: white;
@@ -11,6 +19,10 @@ button {
     padding: 10px;
     border: none;
     outline: none;
+}
+
+footer {
+    text-align: center;
 }
 
 #container {
@@ -55,7 +67,7 @@ and when you move the mouse over it (hover) */
     max-height: 0;
     overflow: hidden;
     background-color: aliceblue;
-    transition: max-height 0.2s ease-out;
+    transition: max-height 0.3s ease-out;
 }
 
 .expandable-text {

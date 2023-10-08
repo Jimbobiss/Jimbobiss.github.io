@@ -13,3 +13,13 @@ for (i = 0; i < coll.length; i++) {
         }
     });
 }
+
+//Age setting script
+const age = document.getElementById("age-container");
+const BIRTH_DAY = "1996-01-26";
+const BIRTH_DAY_DATE = new Date(BIRTH_DAY);
+const now = new Date();
+
+const ageResult = Math.floor((now - BIRTH_DAY_DATE.getTime()) / 3.15576e+10);
+
+age.innerHTML = ageResult;
