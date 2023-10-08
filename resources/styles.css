@@ -80,6 +80,12 @@ footer {
     padding: 10px;
 }
 
+#skills-container {
+    font-size: 2em;
+    width: 2em;
+    margin-top: 5px;
+}
+
 .nav-items {
     display: flex;
     list-style-type: none;
