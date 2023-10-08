@@ -13,12 +13,17 @@ body {
 }
 
 button {
-    background-color: darkcyan;
+    font-family: 'Quicksand', sans-serif;
+    background-color: rgb(49, 46, 46);
     color: white;
     cursor: pointer;
     padding: 10px;
     border: none;
     outline: none;
+}
+
+button:hover {
+    background-color: rgb(55, 54, 54);
 }
 
 footer {
@@ -58,7 +63,7 @@ footer {
 /* Add a background color to the button if it is clicked on (add the .active class with JS), 
 and when you move the mouse over it (hover) */
 .active, .collapsible:hover {
-    background-color: #008b8bbb;
+    background-color: rgb(55, 54, 54);
 }
 
 /* Style the collapsible content. Note: hidden by default */
