@@ -26,6 +26,10 @@ a:hover {
     color: rgb(219, 227, 233);
 }
 
+section {
+    padding: 10px 0;
+}
+
 button {
     font-family: 'Quicksand', sans-serif;
     background-color: rgb(49, 46, 46);
@@ -41,14 +45,15 @@ button:hover {
 }
 
 footer {
+    font-size: 1em;
     text-align: center;
-    margin-top: 50px;
+    margin: 100px 0 50px 0;
 }
 
 #about-me-container {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 20px;
 }
 
 #creator-headshot {
@@ -81,9 +86,11 @@ footer {
 }
 
 #skills-container {
-    font-size: 2em;
-    width: 2em;
-    margin-top: 5px;
+    font-size: 3em;
+    width: 100%;
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-around;
 }
 
 .nav-items {
@@ -130,7 +137,7 @@ and when you move the mouse over it (hover) */
     max-height: 0;
     overflow: hidden;
     background-color: aliceblue;
-    transition: max-height 0.3s ease-out;
+    transition: max-height 0.5s ease-out;
 }
 
 .expandable-text {
