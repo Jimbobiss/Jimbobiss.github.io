@@ -15,6 +15,18 @@ body {
 nav {
     display: flex;
     align-items: center;
+    position: fixed;
+    top: 0;
+    max-width: 900px;
+    width: -webkit-fill-available;
+    width: -moz-available;
+    background-color: rgb(49, 46, 46);
+    z-index: 1;
+    border-bottom: 1px aliceblue solid;
+}
+
+main {
+    margin-top: 75px;
 }
 
 a {
@@ -85,6 +97,15 @@ footer {
     padding: 10px;
 }
 
+#cnc-blog {
+    text-decoration: solid;
+    color: rgb(253, 124, 146);
+}
+
+#cnc-blog:hover {
+    color: rgb(255, 98, 125);
+}
+
 #skills-container {
     font-size: 3em;
     width: 100%;
@@ -133,7 +154,7 @@ and when you move the mouse over it (hover) */
 
 /* Style the collapsible content. Note: hidden by default */
 .content {
-    padding: 0 10px;
+    padding: 0 10px; /* Don't set first value or it messes up the display of the div */
     max-height: 0;
     overflow: hidden;
     background-color: aliceblue;
