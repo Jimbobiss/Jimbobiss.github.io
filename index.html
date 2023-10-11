@@ -14,7 +14,7 @@
 <body>
     <nav>
         <h1 id="title-header">James Hearn</h1>
-        <ul class="nav-items">
+        <ul class="nav-items" id="topnav">
             <li class="nav-item">
                 <a href="#about-me">About Me</a>
             </li>
@@ -26,6 +26,11 @@
             </li>
             <li class="nav-item">
                 <a href="./contact.html">Contact</a>
+            </li>
+            <li id="nav-item-icon">
+                <a href="javascript:void(0)" class="icon" onclick="navFunc()">
+                    <i class="fab fa-osi"></i>
+                </a>
             </li>
         </ul>
     </nav>
@@ -92,7 +97,8 @@
                 </p>
                 <p>
                     If you are interested in viewing the blog, the link can be found 
-                    <a id="cnc-blog" href="https://jimbobiss.github.io/CNCBlog/" target="_blank">here</a>.
+                    <a id="cnc-blog" href="https://jimbobiss.github.io/CNCBlog/" target="_blank" 
+                        rel="noopener">here</a>.
                 </p>
             </div>
             <!-- <button type="button" class="collapsible"></button> -->

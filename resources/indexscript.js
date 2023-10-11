@@ -23,3 +23,13 @@ const now = new Date();
 const ageResult = Math.floor((now - BIRTH_DAY_DATE.getTime()) / 3.15576e+10);
 
 age.innerHTML = ageResult;
+
+//Navbar responsive class adding function
+function navFunc() {
+    let x = document.getElementById("topnav");
+    if (x.className === "nav-items") {
+        x.className += " responsive";
+    } else {
+        x.className = "nav-items";
+    }
+}
