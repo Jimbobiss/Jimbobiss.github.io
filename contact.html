@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./resources/styles.css">
+    <link rel="stylesheet" href="./resources/fontawesome/css/mincss.css">
+    <link rel="stylesheet" href="./resources/fontawesome/css/fontawesome.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
@@ -12,7 +14,7 @@
 <body>
     <nav>
         <h1 id="title-header">James Hearn</h1>
-        <ul class="nav-items">
+        <ul class="nav-items" id="topnav">
             <li class="nav-item">
                 <a href="./index.html#about-me">About Me</a>
             </li>
@@ -23,9 +25,22 @@
                 <a href="./index.html#skills">Skills</a>
             </li>
             <li class="nav-item">
-                <a>Contact</a>
+                <a href="./contact.html">Contact</a>
+            </li>
+            <li id="nav-item-icon">
+                <a href="javascript:void(0)" class="icon" onclick="navFunc()">
+                    <i class="fab fa-osi"></i>
+                </a>
             </li>
         </ul>
     </nav>
+    <main id="contact-main">
+        <div id="contact-info">
+            <h3>Any enquiries should be directed to:</h3>
+            <h4> this@generic.email</h4>
+        </div>
+    </main>
 </body>
+<footer>James Hearn - 2023</footer>
+<script src="./resources/indexscript.js"></script>
 </html>
