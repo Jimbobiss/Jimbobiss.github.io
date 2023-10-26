@@ -114,6 +114,10 @@ footer {
     justify-content: space-around;
 }
 
+#footer-date {
+    padding-top: 20px;
+}
+
 #contact-main {
     display: flex;
     justify-content: center;
@@ -179,6 +183,10 @@ and when you move the mouse over it (hover) */
 
 .expandable-text {
     color: rgb(49, 46, 46);
+}
+
+.footer-span {
+    color: rgb(253, 124, 146);
 }
 
 
