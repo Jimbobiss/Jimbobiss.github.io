@@ -29,13 +29,47 @@ main {
     margin-top: 75px;
 }
 
+p { 
+    line-height: 1.5; 
+    letter-spacing: .05rem; 
+}
+
+/* Part of the nav button underlining function */
+a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: rgb(253, 124, 146);
+  opacity: 0;
+  transition: opacity 300ms, transform 300ms;
+}
+
+/* Part of the nav button underlining function */
+a:hover::after,
+a:focus::after {
+  opacity: 1;
+  transform: translate3d(0, 0.2em, 0);
+}
+
+/* Part of the nav button underlining function */
+li a::after {
+    opacity: 1;
+    transform: scale(0);
+    transform-origin: center;
+}
+
+/* Part of the nav button underlining function */
+li a:hover::after,
+li a:focus::after {
+    transform: scale(1);
+}
+
 a {
     text-decoration: none;
     color: aliceblue;
-}
-
-a:hover {
-    color: rgb(219, 227, 233);
 }
 
 section {
@@ -50,6 +84,7 @@ button {
     padding: 10px;
     border: none;
     outline: none;
+
 }
 
 button:hover {
@@ -60,6 +95,12 @@ footer {
     font-size: 1em;
     text-align: center;
     margin: 100px 0 50px 0;
+}
+
+#title-header { 
+    letter-spacing: .1rem; 
+    font-weight: 500; 
+    font-size: 30px; 
 }
 
 #about-me-container {
@@ -141,6 +182,13 @@ footer {
 
 .nav-item {
     margin: 10px;
+}
+
+/* Part of the nav button underlining function */
+.nav-item a {
+    display: block;
+    position: relative;
+    padding: 0.2em 0;
 }
 
 #nav-item-icon {

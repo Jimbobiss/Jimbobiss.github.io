@@ -17,7 +17,12 @@
   .fab,
   .fa-brands {
     font-weight: 400;
-    transition: all 0.2s ease-out; }
+    transition: all 0.7s ease-in; }
+
+  .fab:hover,
+  .fa-brands:hover {
+    transition: all 0.2s ease-in;
+  }
   
   .fa-monero:before {
     content: "\f3d0"; }
