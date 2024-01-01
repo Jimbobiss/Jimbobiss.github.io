@@ -30,7 +30,8 @@ main {
 }
 
 img {
-    max-width: -webkit-fill-available;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 p { 
