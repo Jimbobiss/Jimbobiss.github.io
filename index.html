@@ -10,13 +10,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/nnfx-dark.css">
 </head>
 <body>
     <nav>
         <h1 id="title-header">James Hearn</h1>
         <ul class="nav-items" id="topnav">
             <li class="nav-item">
-                <a href="#about-me">About Me</a>
+                <a href="#">About Me</a>
             </li>
             <li class="nav-item">
                 <a href="#projects">Projects</a>
@@ -97,12 +98,95 @@
                 </p>
                 <p>
                     If you are interested in viewing the blog, the link can be found 
-                    <a id="cnc-blog" href="https://jimbobiss.github.io/CNCBlog/" target="_blank" 
+                    <a class="article-link" id="cnc-blog" href="https://jimbobiss.github.io/CNCBlog/" target="_blank" 
                         rel="noopener">here</a>.
                 </p>
             </div>
+            <button type="button" class="collapsible">Codecademy React Practice Project</button>
+            <div class="project content expandable-text">
+                <p>
+                    Moving further into a full-stack dev course I've been following from Codecademy, I 
+                    had my first taste of the React.js framework. As part of the learning process, I was
+                    tasked with creating a single page application that utilises the Spotify API to allow
+                    a user to create and save playlists back to their Spotify account.
+                </p>
+                <img 
+                    src="./resources/images/jammingpp.png" 
+                    alt="A picture of a single page React web application"
+                />
+                <p>
+                    A further learning point in the project was to deploy the app to the web and for this 
+                    purpose <a href="https://www.netlify.com/" 
+                        class="article-link" 
+                        target="_blank" 
+                        rel="noopener">Netlify</a> was utlisied. It's a very straightforward and useful application for 
+                    publishing React apps, and as such the live app can be found
+                    <a href="https://cc-jammming-reactpractice.netlify.app/" 
+                        class="article-link" 
+                        target="_blank" 
+                        rel="noopener">at this address</a>.
+                </p>
+                <p>
+                    This was quite a challenging task to conquer, being the first React app I had ever developed alone,
+                    and there are still a number of bugs present in the app that I would like to fix. Namely:
+                    <ul>
+                        <li>The first attempted search never returns a result</li>
+                        <li>A number of users don't seem to be able to authenticate with the app</li>
+                        <li>Some users are unable to play previews of the songs</li>
+                    </ul>
+                    Any ideas on how to fix these issues would be greatly appreciated and you can send me an email 
+                    with your thoughts at the address on the contact page!
+                </p>
+                <p>
+                    Finally, this was also the first time I had experimented with SVGs and basic aninimations 
+                    (which you can see at work as the track preview play button in the app) - another interesting
+                    and exciting thing to learn about!
+                </p>
+            </div>
+            <button type="button" class="collapsible">React Planner App</button>
+            <div class="project content expandable-text">
+                <p>
+                    In true "Hello, World" fashion, once I had gone a bit further in my study of React, I decided
+                    to develop a simple "planner" application... in other words a glorified to-do app! 
+                </p>
+                <p>
+                    I had covered <a href="https://reactrouter.com/" 
+                        class="article-link" 
+                        target="_blank" 
+                        rel="noopener">ReactRouter</a> at this point and so wanted to practice the principles whilst also
+                    making something useful for myself. A simple planning app seemed like a good fit for this set
+                    of requirements and provided a good amount of expansion opportunities.
+                </p>
+                <p>
+                    At this point in time, I have made a fully functional but basic implmentation of the to-do list part of
+                    the
+                    app and I'm working on creating a contact page for storing all my useful connections' details. Since 
+                    I have yet to cover any backend content in my learning, I have utilised the 
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage" 
+                        class="article-link" 
+                        target="_blank" 
+                        rel="noopener"">localStorage</a> property of the browser to store the stateful data I need, but
+                        it will be easily possible to implement a backend solution in the future, if I feel so inclined.
+                </p>
+                <pre>
+                    <code class="language-javascript">
+// The code in the react component that fetches the "saved" state from localStorage
+
+const [todo, setTodo] = useState(JSON.parse(localStorage.getItem("todo")) || []);
+                    </code>
+                </pre>
+                <img src="./resources/images/JPA-react.png" alt="A picture of a single page React web application">
+                <p>
+                    I plan to add a third useful page to the application in due course, but the possibility for 
+                    expansion is endless and very approachable, due to the modular nature of React.
+                </p>
+                <p>
+                    I won't be publishing this app to the web, so I have made it more like a desktop app by creating an
+                    executable <code>.bat</code> file that I can run to open it up, which was another short but fun endeavour. 
+                </p>
+            </div>
             <!-- <button type="button" class="collapsible"></button> -->
-            <div class="project content"></div>
+            <div class="project content expandable-text"></div>
         </section>
         <section id="skills">
             <h3>Skills</h3>
@@ -110,6 +194,7 @@
                 <i class="fab fa-html5"></i>
                 <i class="fab fa-css3-alt"></i>
                 <i class="fab fa-js"></i>
+                <i class="fab fa-react"></i>
                 <i class="fab fa-java"></i>
                 <i class="fab fa-git"></i>
                 <i class="fab fa-github"></i>
@@ -122,11 +207,13 @@
             James Hearn
         </p>
         <p id="footer-date">
-            <span class="footer-span">- </span>2023<span class="footer-span"> -</span>
+            <span class="footer-span">- </span>2024<span class="footer-span"> -</span>
         </p> 
     </footer>
     <script src="./resources/indexscript.js"></script>
     <script src="./resources/myscript.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
 </body>
 
 <body>

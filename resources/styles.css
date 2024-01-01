@@ -29,13 +29,17 @@ main {
     margin-top: 75px;
 }
 
+img {
+    max-width: -webkit-fill-available;
+}
+
 p { 
     line-height: 1.5; 
     letter-spacing: .05rem; 
 }
 
 /* Part of the nav button underlining function */
-a::after {
+li a::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -48,8 +52,8 @@ a::after {
 }
 
 /* Part of the nav button underlining function */
-a:hover::after,
-a:focus::after {
+li a:hover::after,
+li a:focus::after {
   opacity: 1;
   transform: translate3d(0, 0.2em, 0);
 }
@@ -235,6 +239,15 @@ and when you move the mouse over it (hover) */
 
 .footer-span {
     color: rgb(253, 124, 146);
+}
+
+.article-link {
+    text-decoration: solid;
+    color: rgb(253, 124, 146);
+}
+
+.article-link:hover {
+    color: rgb(255, 98, 125);
 }
 
 
