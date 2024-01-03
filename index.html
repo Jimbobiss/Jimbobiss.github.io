@@ -10,20 +10,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/nnfx-dark.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/stackoverflow-dark.css">
 </head>
 <body>
     <nav>
         <h1 id="title-header">James Hearn</h1>
         <ul class="nav-items" id="topnav">
             <li class="nav-item">
-                <a href="#">About Me</a>
+                <a href="#" onclick="closeNav()">About Me</a>
             </li>
             <li class="nav-item">
-                <a href="#projects">Projects</a>
+                <a href="#projects" onclick="closeNav()">Projects</a>
             </li>
             <li class="nav-item">
-                <a href="#skills">Skills</a>
+                <a href="#skills" onclick="closeNav()">Skills</a>
             </li>
             <li class="nav-item">
                 <a href="./contact.html">Contact</a>
@@ -214,6 +214,9 @@ const [todo, setTodo] = useState(JSON.parse(localStorage.getItem("todo")) || [])
     </footer>
     <script src="./resources/indexscript.js"></script>
     <script src="./resources/myscript.js"></script>
+    <script>function closeNav() {
+        document.getElementById('topnav').classList.toggle('responsive');
+    }</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
 </body>
